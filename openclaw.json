@@ -3,10 +3,10 @@
     "defaults": {
       "workspace": "/root/.openclaw/workspace",
       "models": {
-        "openai/llama-3.3-70b-versatile": {}
+        "openrouter/google/gemini-2.0-flash-001": {}
       },
       "model": {
-        "primary": "openai/llama-3.3-70b-versatile"
+        "primary": "openrouter/google/gemini-2.0-flash-001"
       }
     }
   },
@@ -32,15 +32,6 @@
   "tools": {
     "profile": "coding"
   },
-  "auth": {
-    "profiles": {
-      "openai:default": {
-        "provider": "openai",
-        "mode": "api_key",
-        "baseUrl": "https://api.groq.com/openai/v1"
-      }
-    }
-  },
   "channels": {
     "telegram": {
       "enabled": true,
@@ -51,5 +42,16 @@
       },
       "botToken": "8698817911:AAEUCZgUa5aVChOURW-8PSFmWpjiccMpQoE"
     }
+  },
+  "plugins": {
+    "entries": {
+      "openrouter": {
+        "enabled": true
+      }
+    }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.4.11",
+    "lastTouchedAt": "2026-04-12T02:35:13.231Z"
   }
 }
