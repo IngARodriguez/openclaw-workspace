@@ -1,12 +1,16 @@
 {
   "agents": {
     "defaults": {
-      "workspace": "/root/.openclaw/workspace",
+      "workspace": "/home/claw/workspace",
       "models": {
-        "openrouter/google/gemini-2.0-flash-001": {}
+        "openrouter/google/gemini-2.0-flash-001": {},
+        "github-copilot/claude-sonnet-4.6": {}
       },
       "model": {
         "primary": "openrouter/google/gemini-2.0-flash-001"
+      },
+      "compaction": {
+        "mode": "safeguard"
       }
     }
   },
@@ -14,7 +18,7 @@
     "mode": "local",
     "auth": {
       "mode": "token",
-      "token": "449786a06f064489ed767a8fc5dd03f2a480134cc23a54f1"
+      "token": "cb8c814ce6d296d89f25eff05ade6d7667594a1d59a7dcd3"
     },
     "port": 18789,
     "bind": "loopback",
@@ -32,6 +36,92 @@
   "tools": {
     "profile": "coding"
   },
+  "plugins": {
+    "entries": {
+      "openrouter": {
+        "enabled": true
+      },
+      "commit-commands": {
+        "enabled": true
+      },
+      "session-report": {
+        "enabled": true
+      },
+      "security-guidance": {
+        "enabled": true
+      },
+      "feature-dev": {
+        "enabled": true
+      },
+      "github": {
+        "enabled": true
+      },
+      "code-review": {
+        "enabled": true
+      },
+      "github-copilot": {
+        "enabled": true
+      },
+      "claude-code": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "commit-commands": {
+        "source": "marketplace",
+        "installPath": "/home/claw/.openclaw/extensions/commit-commands",
+        "marketplaceName": "claude-plugins-official",
+        "marketplaceSource": "claude-plugins-official",
+        "marketplacePlugin": "commit-commands",
+        "installedAt": "2026-04-12T06:52:44.864Z"
+      },
+      "session-report": {
+        "source": "marketplace",
+        "installPath": "/home/claw/.openclaw/extensions/session-report",
+        "marketplaceName": "claude-plugins-official",
+        "marketplaceSource": "claude-plugins-official",
+        "marketplacePlugin": "session-report",
+        "installedAt": "2026-04-12T06:53:12.864Z"
+      },
+      "security-guidance": {
+        "source": "marketplace",
+        "installPath": "/home/claw/.openclaw/extensions/security-guidance",
+        "marketplaceName": "claude-plugins-official",
+        "marketplaceSource": "claude-plugins-official",
+        "marketplacePlugin": "security-guidance",
+        "installedAt": "2026-04-12T06:53:16.864Z"
+      },
+      "feature-dev": {
+        "source": "marketplace",
+        "installPath": "/home/claw/.openclaw/extensions/feature-dev",
+        "marketplaceName": "claude-plugins-official",
+        "marketplaceSource": "claude-plugins-official",
+        "marketplacePlugin": "feature-dev",
+        "installedAt": "2026-04-12T06:53:21.864Z"
+      },
+      "github": {
+        "source": "marketplace",
+        "installPath": "/home/claw/.openclaw/extensions/github",
+        "marketplaceName": "claude-plugins-official",
+        "marketplaceSource": "claude-plugins-official",
+        "marketplacePlugin": "github",
+        "installedAt": "2026-04-12T06:53:25.864Z"
+      },
+      "code-review": {
+        "source": "marketplace",
+        "installPath": "/home/claw/.openclaw/extensions/code-review",
+        "marketplaceName": "claude-plugins-official",
+        "marketplaceSource": "claude-plugins-official",
+        "marketplacePlugin": "code-review",
+        "installedAt": "2026-04-12T06:53:40.864Z"
+      },
+      "claude-code": {
+        "source": "local",
+        "installPath": "/home/claw/.openclaw/extensions/claude-code",
+        "installedAt": "2026-04-16T00:00:00.000Z"
+      }
+    }
+  },
   "channels": {
     "telegram": {
       "enabled": true,
@@ -43,15 +133,23 @@
       "botToken": "8698817911:AAEUCZgUa5aVChOURW-8PSFmWpjiccMpQoE"
     }
   },
-  "plugins": {
+  "skills": {
     "entries": {
-      "openrouter": {
-        "enabled": true
+      "openai-whisper-api": {
+        "apiKey": "SET_VIA_OPENCLAW_CONFIG"
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "github-copilot:github": {
+        "provider": "github-copilot",
+        "mode": "token"
       }
     }
   },
   "meta": {
     "lastTouchedVersion": "2026.4.11",
-    "lastTouchedAt": "2026-04-12T02:35:13.231Z"
+    "lastTouchedAt": "2026-04-16T00:00:00.000Z"
   }
 }
